@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title> Home Page</title>
+</head>
+
+<body>
+    <header>
+        <h2>Vehicle Insurance Sales Prediction</h2>
+    </header>
+
+    <div>
+        <form action="{{url_for('predict')}}", method="POST">
+
+            <label for="gender">Please enter your gender: (eg. 1-> Male, 0->Female)</label><br>
+            <input type="text" id="gender" name="gender"><br><br>
+
+            <label for="age">Please enter your age: (eg. 40)</label><br>
+            <input type="text" id="age" name="age"><br><br>
+
+            <label for="region_code">Please enter your region code:</label><br>
+            <input type="text" id="region_code" name="region_code"><br><br>
+
+            <label for="prev_insured">Have you taken insurance previously: (eg 0 for No, 1 for Yes)</label><br>
+            <input type="text" id="prev_insured" name="prev_insured"><br><br>
+
+            <label for="vehicle_damage">By any chance your vehicle experienced any damage?: (eg. 0 for No, 1 for Yes) </label><br>
+            <input type="text" id="vehicle_damage" name="vehicle_damage"><br><br>
+
+            <label for="policy">Please enter your policy sales channel:</label><br>
+            <input type="text" id="policy" name="policy"><br><br>
+
+            <label for="vintage"> Enter your vintage value?:</label><br>
+            <input type="text" id="vintage" name="vintage"><br><br>
+
+            <input type = 'submit' class = 'btn-info' value = 'predict'>
+
+        </form>
+
+        {{prediction_value}}
+    </div>
+</body>
+
+</html>
